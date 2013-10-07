@@ -1,6 +1,6 @@
 LocalNotification Plugin for PhoneGap
 ==========================
-This PhoneGap plugin for Android is based on [the phonegap plugin found here](https://github.com/phonegap/phonegap-plugins/tree/master/Android/LocalNotification), updated to work with PhoneGap 3. This plugin must be manually installed (for now).
+This PhoneGap plugin for Android is based on [the phonegap plugin found here](https://github.com/phonegap/phonegap-plugins/tree/master/Android/LocalNotification), and the tips found [at this blog post](http://tech.cibul.net/using-the-android-localnotification-plugin-for-phonegap/), updated to work with PhoneGap 3. This plugin must be manually installed (for now).
 
 I had to update the old plugin for a project of mine, so I figured I would share the code and steps I took so others could use the plugin too :)
 
