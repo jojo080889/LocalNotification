@@ -14,9 +14,9 @@ I had to update the old plugin for a project of mine, so I figured I would share
 
 4) Copy all the .java files into this last folder.
 
-5) Open **AlarmReceiver.java** and change **import com.phonegap.your.project.namespace.R;** so that it uses your app's package name instead. Remember to keep the .R at the end of the line!
+5) Open **AlarmReceiver.java** and change `import com.phonegap.your.project.namespace.R;` so that it uses your app's package name instead. Remember to keep the .R at the end of the line!
 
-6) Open **<project directory>/platforms/android/res/xml/config.xml** and add the following to the end of the <feature> list (inside the <widget> tag):
+6) Open **<project directory>/platforms/android/res/xml/config.xml** and add the following to the end of the `<feature>` list (inside the `<widget>` tag):
 
 ```xml
 <feature name="LocalNotification">
@@ -24,7 +24,7 @@ I had to update the old plugin for a project of mine, so I figured I would share
   </feature>
 ```
 
-7) Open **<project directory>/platforms/android/AndroidManifest.xml** and add the following inside the <application> tag:
+7) Open **<project directory>/platforms/android/AndroidManifest.xml** and add the following inside the `<application>` tag:
 
 ```xml
 <receiver android:name="com.phonegap.plugin.localnotification.AlarmReceiver" >
@@ -36,6 +36,14 @@ I had to update the old plugin for a project of mine, so I figured I would share
   </intent-filter>
 </receiver>
 ```
+
+Also add the following to your permissions list (inside the `manifest` tag):
+
+```xml
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+```
+
+This is so your app can restore any notifications it set after a system reboot.
 
 8) Lastly, reference **LocalNotification.js** in your **www/index.html** or wherever your main application code is:
 
