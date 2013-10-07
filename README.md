@@ -37,7 +37,7 @@ I had to update the old plugin for a project of mine, so I figured I would share
 </receiver>
 ```
 
-8) Lastly, reference **LocalNotification.js** in your **www/index.html** or wherever your main application code is.:
+8) Lastly, reference **LocalNotification.js** in your **www/index.html** or wherever your main application code is:
 
 ```html
 <script type="text/javascript" src="js/LocalNotification.js"></script>
@@ -68,3 +68,6 @@ plugins.localNotification.cancel(123);
 
 plugins.localNotification.cancelAll();
 ```
+
+## Other Tips
+* This plugin must be added manually and doesn't work with PhoneGap Build. This means you have to use the CLI to build and deploy your app (use **phonegap local run android**)
